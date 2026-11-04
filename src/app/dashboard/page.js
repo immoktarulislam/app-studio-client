@@ -4,13 +4,13 @@ import { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import { toast } from "sonner";
 import {
-  Building2,
-  CalendarCheck2,
-  Heart,
-  MapPin,
-  Plus,
-  Search,
-  Wallet,
+  // Building2,
+  // CalendarCheck2,
+  // Heart,
+  // MapPin,
+  // Plus,
+  // Search,
+  // Wallet,
 } from "lucide-react";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import StudioCard from "@/components/StudioCard";
