@@ -1,6 +1,6 @@
 "use client";
 
-// import { Suspense, useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Aperture, LayoutDashboard, LogOut, Menu, Plus, Building2, CalendarCheck, X } from "lucide-react";
@@ -8,8 +8,8 @@ import { useAuth } from "@/context/AuthContext";
 import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
-import ThemeToggle from "./ThemeToggle";
-import Spinner from "./ui/Spinner";
+// import ThemeToggle from "./ThemeToggle";
+// import Spinner from "./ui/Spinner";
 
 function Logo() {
   return (
