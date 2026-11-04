@@ -1,13 +1,13 @@
 import Link from "next/link";
-// import {
-//   ArrowRight,
-//   CalendarCheck2,
-//   CreditCard,
-//   KeyRound,
-//   Search,
-//   Sparkles,
-//   Video,
-// } from "lucide-react";
+import {
+  ArrowRight,
+  CalendarCheck2,
+  CreditCard,
+  KeyRound,
+  Search,
+  Sparkles,
+  Video,
+} from "lucide-react";
 
 export const metadata = {
   title: "How It Works",
@@ -89,9 +89,8 @@ export default function HowItWorksPage() {
             return (
               <div
                 key={step.title}
-                className={`card grid gap-6 p-8 md:grid-cols-[auto_1fr] ${
-                  reversed ? "md:[direction:rtl]" : ""
-                }`}
+                className={`card grid gap-6 p-8 md:grid-cols-[auto_1fr] ${reversed ? "md:[direction:rtl]" : ""
+                  }`}
               >
                 <div className="flex items-start gap-4 md:[direction:ltr]">
                   <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-brand text-on-brand shadow-sm shadow-brand/30">
