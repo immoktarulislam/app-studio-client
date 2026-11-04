@@ -1,12 +1,12 @@
 import Link from "next/link";
-import {
-  ArrowRight,
-  Camera,
-  HeartHandshake,
-  MapPinned,
-  ShieldCheck,
-  Users,
-} from "lucide-react";
+// import {
+//   ArrowRight,
+//   Camera,
+//   HeartHandshake,
+//   MapPinned,
+//   ShieldCheck,
+//   Users,
+// } from "lucide-react";
 
 export const metadata = {
   title: "About Us",
@@ -44,8 +44,8 @@ const NUMBERS = [
   { value: "0%", label: "Listing fees for hosts" },
 ];
 
-// export default function AboutPage() {
-  return (
+export default function AboutPage() {
+  return ( 
     <div>
       {/* Hero */}
       <section className="border-b border-line bg-surface">
