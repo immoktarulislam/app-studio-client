@@ -1,9 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
-import Link from "next/link";
-import { notFound, useParams, useRouter } from "next/navigation";
-import { Swiper, SwiperSlide } from "swiper/react";
+// import { useCallback, useEffect, useMemo, useState } from "react";
+// import Link from "next/link";
+// import { notFound, useParams, useRouter } from "next/navigation";
+// import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -66,7 +66,7 @@ export default function StudioDetailsPage() {
     wishlistApi
       .ids()
       .then((data) => setSaved((data.wishlist || []).includes(id)))
-      .catch(() => {});
+      .catch(() => { });
   }, [user, id]);
 
   const gallery = useMemo(() => {
