@@ -4,15 +4,15 @@ export function cn(...classes) {
 }
 
 /** $45 */
-// export function formatNumber(value) {
-//   const n = Number(value) || 0;
-//   return n.toLocaleString("en-US");
-// }
+export function formatNumber(value) {
+  const n = Number(value) || 0;
+  return n.toLocaleString("en-US");
+}
 
-// /** $45 / hr — used on studio cards */
-// export function formatRate(value) {
-//   return `$${formatNumber(value)} / hr`;
-// }
+/** $45 / hr — used on studio cards */
+export function formatRate(value) {
+  return `$${formatNumber(value)} / hr`;
+}
 
 /** $1,250 — used for totals and deposits */
 export function formatMoney(value) {

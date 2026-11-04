@@ -153,12 +153,12 @@ export const SORT_OPTIONS = [
   { value: "price_desc", label: "Price: high to low" },
 ];
 
-export const NAV_LINKS = [
-  { label: "Home", href: "/" },
-  { label: "Explore Studios", href: "/studios" },
-  { label: "How It Works", href: "/how-it-works" },
-  { label: "About Us", href: "/about" },
-];
+// export const NAV_LINKS = [
+//   { label: "Home", href: "/" },
+//   { label: "Explore Studios", href: "/studios" },
+//   { label: "How It Works", href: "/how-it-works" },
+//   { label: "About Us", href: "/about" },
+// ];
 
 /** Graceful image fallback while a URL loads or when it is broken. */
 export const FALLBACK_IMAGE =
