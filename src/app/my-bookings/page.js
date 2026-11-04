@@ -1,8 +1,8 @@
 "use client";
 
-// import { useCallback, useEffect, useState } from "react";
-// import Link from "next/link";
-// import { toast } from "sonner";
+import { useCallback, useEffect, useState } from "react";
+import Link from "next/link";
+import { toast } from "sonner";
 import { CalendarCheck2, Clock, MapPin, XCircle } from "lucide-react";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import InvoiceButton from "@/components/InvoiceButton";
@@ -22,10 +22,10 @@ import {
 } from "@/lib/utils";
 
 function BookingsContent() {
-  const { user } = useAuth();
-  const [bookings, setBookings] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [loadError, setLoadError] = useState(null);
+  // const { user } = useAuth();
+  // const [bookings, setBookings] = useState([]);
+  // const [loading, setLoading] = useState(true);
+  // const [loadError, setLoadError] = useState(null);
   const [pendingCancel, setPendingCancel] = useState(null);
   const [cancelling, setCancelling] = useState(false);
 
