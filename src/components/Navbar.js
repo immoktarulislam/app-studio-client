@@ -8,8 +8,8 @@ import { useAuth } from "@/context/AuthContext";
 import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
-// import ThemeToggle from "./ThemeToggle";
-// import Spinner from "./ui/Spinner";
+import ThemeToggle from "./ThemeToggle";
+import Spinner from "./ui/Spinner";
 
 function Logo() {
   return (
