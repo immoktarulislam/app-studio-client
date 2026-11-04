@@ -22,12 +22,12 @@ export async function api(path, { method = "GET", body } = {}) {
     );
   }
 
-  // let data = {};
-  // try {
-  //   data = await response.json();
-  // } catch {
-  //   data = {};
-  // }
+  let data = {};
+  try {
+    data = await response.json();
+  } catch {
+    data = {};
+  }
 
   if (!response.ok) {
     const error = new Error(
