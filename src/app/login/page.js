@@ -11,10 +11,10 @@ import ForgotPasswordModal from "@/components/ForgotPasswordModal";
 import Spinner from "@/components/ui/Spinner";
 
 function LoginForm() {
-  // const { user, loading, login } = useAuth();
-  // const router = useRouter();
-  // const searchParams = useSearchParams();
-  // const next = searchParams.get("next") || "/";
+  const { user, loading, login } = useAuth();
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const next = searchParams.get("next") || "/";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
