@@ -111,7 +111,7 @@ export default function StudioDetailsPage() {
       </Link>
 
       {/* Gallery */}
-      {/* <div className="relative mt-5 h-72 overflow-hidden rounded-3xl sm:h-[26rem]">
+      <div className="relative mt-5 h-72 overflow-hidden rounded-3xl sm:h-[26rem]">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           navigation
@@ -140,7 +140,7 @@ export default function StudioDetailsPage() {
           onChange={(data) => setSaved(data.added)}
           className="absolute right-4 top-4"
         />
-      </div> */}
+      </div>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-3">
         {/* Main column */}
