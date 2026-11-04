@@ -22,10 +22,10 @@ import {
 } from "@/lib/utils";
 
 function BookingsContent() {
-  // const { user } = useAuth();
-  // const [bookings, setBookings] = useState([]);
-  // const [loading, setLoading] = useState(true);
-  // const [loadError, setLoadError] = useState(null);
+  const { user } = useAuth();
+  const [bookings, setBookings] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState(null);
   const [pendingCancel, setPendingCancel] = useState(null);
   const [cancelling, setCancelling] = useState(false);
 
