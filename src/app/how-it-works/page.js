@@ -1,13 +1,13 @@
 import Link from "next/link";
-import {
-  ArrowRight,
-  CalendarCheck2,
-  CreditCard,
-  KeyRound,
-  Search,
-  Sparkles,
-  Video,
-} from "lucide-react";
+// import {
+//   ArrowRight,
+//   CalendarCheck2,
+//   CreditCard,
+//   KeyRound,
+//   Search,
+//   Sparkles,
+//   Video,
+// } from "lucide-react";
 
 export const metadata = {
   title: "How It Works",
