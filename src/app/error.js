@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import { RefreshCw } from "lucide-react";
+// import Link from "next/link";
+// import { RefreshCw } from "lucide-react";
 
 /** Route error boundary — shown if a page fails to render. */
 export default function Error({ error, reset }) {
