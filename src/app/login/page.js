@@ -1,8 +1,8 @@
 "use client";
 
-// import { Suspense, useEffect, useState } from "react";
-// import Link from "next/link";
-// import { useSearchParams, useRouter } from "next/navigation";
+import { Suspense, useEffect, useState } from "react";
+import Link from "next/link";
+import { useSearchParams, useRouter } from "next/navigation";
 import { Aperture, Eye, EyeOff, LogIn } from "lucide-react";
 import { toast } from "sonner";
 import { useAuth } from "@/context/AuthContext";
@@ -11,10 +11,10 @@ import ForgotPasswordModal from "@/components/ForgotPasswordModal";
 import Spinner from "@/components/ui/Spinner";
 
 function LoginForm() {
-  const { user, loading, login } = useAuth();
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const next = searchParams.get("next") || "/";
+  // const { user, loading, login } = useAuth();
+  // const router = useRouter();
+  // const searchParams = useSearchParams();
+  // const next = searchParams.get("next") || "/";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
