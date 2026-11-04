@@ -146,12 +146,12 @@ export const GUARANTEES = [
   },
 ];
 
-// export const SORT_OPTIONS = [
-//   { value: "newest", label: "Newest first" },
-//   { value: "rating", label: "Top rated" },
-//   { value: "price_asc", label: "Price: low to high" },
-//   { value: "price_desc", label: "Price: high to low" },
-// ];
+export const SORT_OPTIONS = [
+  { value: "newest", label: "Newest first" },
+  { value: "rating", label: "Top rated" },
+  { value: "price_asc", label: "Price: low to high" },
+  { value: "price_desc", label: "Price: high to low" },
+];
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
