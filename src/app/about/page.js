@@ -44,7 +44,7 @@ const NUMBERS = [
   { value: "0%", label: "Listing fees for hosts" },
 ];
 
-export default function AboutPage() {
+// export default function AboutPage() {
   return (
     <div>
       {/* Hero */}
