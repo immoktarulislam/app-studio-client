@@ -1,0 +1,252 @@
+@import "tailwindcss";
+
+/* Class-based dark mode (driven by next-themes) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- StudioSpace design tokens ---------- */
+:root {
+  --sp-bg: #faf9f7;
+  --sp-surface: #ffffff;
+  --sp-surface-2: #f5f5f4;
+  --sp-text: #1c1917;
+  --sp-muted: #78716c;
+  --sp-line: #e7e5e4;
+  --sp-brand: #d97706;
+  --sp-brand-strong: #b45309;
+  --sp-brand-soft: #fef3c7;
+  --sp-on-brand: #1c1917;
+  --sp-danger: #dc2626;
+  --sp-success: #15803d;
+}
+
+.dark {
+  --sp-bg: #0c0a09;
+  --sp-surface: #1c1917;
+  --sp-surface-2: #292524;
+  --sp-text: #f5f5f4;
+  --sp-muted: #a8a29e;
+  --sp-line: #292524;
+  --sp-brand: #f59e0b;
+  --sp-brand-strong: #fbbf24;
+  --sp-brand-soft: #451a03;
+  --sp-on-brand: #1c1917;
+  --sp-danger: #f87171;
+  --sp-success: #4ade80;
+}
+
+@theme inline {
+  --color-bg: var(--sp-bg);
+  --color-surface: var(--sp-surface);
+  --color-surface-2: var(--sp-surface-2);
+  --color-ink: var(--sp-text);
+  --color-muted: var(--sp-muted);
+  --color-line: var(--sp-line);
+  --color-brand: var(--sp-brand);
+  --color-brand-strong: var(--sp-brand-strong);
+  --color-brand-soft: var(--sp-brand-soft);
+  --color-on-brand: var(--sp-on-brand);
+  --color-danger: var(--sp-danger);
+  --color-success: var(--sp-success);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+body {
+  background-color: var(--sp-bg);
+  color: var(--sp-text);
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--sp-brand);
+  color: var(--sp-on-brand);
+}
+
+/* ---------- Shared component classes (consistent across all sections) ---------- */
+@layer components {
+  .section-kicker {
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.22em] text-brand;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold tracking-tight text-ink sm:text-4xl;
+  }
+
+  .section-sub {
+    @apply mt-3 max-w-2xl text-base leading-relaxed text-muted;
+  }
+
+  .btn {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-full text-sm font-semibold transition-all duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-brand text-on-brand shadow-lg shadow-brand/20 hover:-translate-y-0.5 hover:bg-brand-strong hover:shadow-xl hover:shadow-brand/30;
+  }
+
+  .btn-dark {
+    @apply bg-ink text-bg hover:-translate-y-0.5 hover:opacity-90;
+  }
+
+  .btn-ghost {
+    @apply border border-line bg-surface text-ink hover:border-brand hover:text-brand;
+  }
+
+  .btn-danger {
+    @apply bg-danger text-white hover:opacity-90;
+  }
+
+  .btn-lg {
+    @apply px-7 py-3.5 text-base;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2 text-xs;
+  }
+
+  .input {
+    @apply w-full rounded-xl border border-line bg-surface px-4 py-2.5 text-sm text-ink transition placeholder:text-muted focus:border-brand focus:outline-none focus:ring-4 focus:ring-brand/15;
+  }
+
+  .label {
+    @apply mb-1.5 block text-sm font-semibold text-ink;
+  }
+
+  .hint {
+    @apply mt-1.5 text-xs text-muted;
+  }
+
+  .field-error {
+    @apply mt-1.5 text-xs font-semibold text-danger;
+  }
+
+  .card {
+    @apply rounded-2xl border border-line bg-surface shadow-sm;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide;
+  }
+
+  .badge-brand {
+    @apply bg-brand-soft text-brand-strong dark:text-brand;
+  }
+
+  .badge-solid {
+    @apply bg-brand text-on-brand;
+  }
+
+  .badge-muted {
+    @apply bg-surface-2 text-muted;
+  }
+
+  .input-error {
+    @apply border-danger focus:border-danger focus:ring-danger/20;
+  }
+}
+
+/* ---------- Skeleton shimmer (branded loading state) ---------- */
+.skeleton {
+  @apply relative overflow-hidden rounded-xl bg-surface-2;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.55), transparent);
+  animation: sp-shimmer 1.4s infinite;
+}
+
+.dark .skeleton::after {
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.07), transparent);
+}
+
+@keyframes sp-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.sp-fade-up {
+  animation: sp-fade-up 0.5s ease both;
+}
+
+@keyframes sp-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Thin, subtle scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ---------- Swiper (hero slider + gallery) ---------- */
+.swiper-pagination {
+  bottom: 26px !important;
+}
+
+.swiper-pagination-bullet {
+  opacity: 0.55;
+  background: #ffffff;
+  width: 9px;
+  height: 9px;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--sp-brand);
+  width: 26px;
+  border-radius: 6px;
+  transition:
+    width 0.3s,
+    background 0.3s;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff;
+  background: rgb(0 0 0 / 0.35);
+  width: 42px;
+  height: 42px;
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: var(--sp-brand);
+  color: var(--sp-on-brand);
+}
