@@ -146,19 +146,19 @@ export const GUARANTEES = [
   },
 ];
 
-export const SORT_OPTIONS = [
-  { value: "newest", label: "Newest first" },
-  { value: "rating", label: "Top rated" },
-  { value: "price_asc", label: "Price: low to high" },
-  { value: "price_desc", label: "Price: high to low" },
-];
-
-// export const NAV_LINKS = [
-//   { label: "Home", href: "/" },
-//   { label: "Explore Studios", href: "/studios" },
-//   { label: "How It Works", href: "/how-it-works" },
-//   { label: "About Us", href: "/about" },
+// export const SORT_OPTIONS = [
+//   { value: "newest", label: "Newest first" },
+//   { value: "rating", label: "Top rated" },
+//   { value: "price_asc", label: "Price: low to high" },
+//   { value: "price_desc", label: "Price: high to low" },
 // ];
+
+export const NAV_LINKS = [
+  { label: "Home", href: "/" },
+  { label: "Explore Studios", href: "/studios" },
+  { label: "How It Works", href: "/how-it-works" },
+  { label: "About Us", href: "/about" },
+];
 
 /** Graceful image fallback while a URL loads or when it is broken. */
 export const FALLBACK_IMAGE =
